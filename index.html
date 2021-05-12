@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/public/moon.svg" />
+  <link href='https://css.gg/moon.css' rel='stylesheet'>
+  <title>light_dark theme</title>
+</head>
+<style>
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dark {
+    background: rgb(26, 26, 26);
+    color: white;
+  }
+
+  #title {
+    margin: 20px 20px 20px 0px ;
+  }
+
+  .text {
+    max-width: 80%;
+    margin-left: 10%;
+    text-align: justify;
+  }
+
+</style>
+<body>
+  <div class="header">
+    <h1 id="title">Light Mode</h1>
+    <a id="theme-toggle" href="#"><i class="gg-moon"></i></a>
+  </div>
+  <p class="text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at mi arcu. Integer pulvinar finibus suscipit. Mauris semper in justo at venenatis. Vivamus id dolor vitae mauris rutrum tincidunt. Praesent eu mauris eleifend, interdum turpis eget, mollis sapien. Duis varius magna vitae sollicitudin maximus. Suspendisse maximus lacus tortor, in rutrum lacus pretium id. Curabitur suscipit orci sed neque dictum dictum. Nam nibh libero, pellentesque at euismod et, laoreet at massa. Duis bibendum dictum sem, sed finibus eros rhoncus id. Maecenas dictum, nibh at dapibus vestibulum, justo nulla faucibus erat, accumsan vulputate massa orci id quam. Aenean congue pharetra tellus id venenatis. Etiam pulvinar fermentum aliquet.
+  </p>
+  <p class="text">
+    Suspendisse ultrices volutpat est et pretium. Ut posuere commodo massa vel elementum. Ut molestie efficitur turpis id cursus. Suspendisse ultricies sodales ex vitae fringilla. Aenean sodales, ligula in mollis tristique, sem urna tincidunt sapien, consectetur fermentum libero risus eget turpis. Nulla pretium velit ac tempor fringilla. Mauris iaculis tincidunt arcu, a finibus justo consequat eu. Aliquam facilisis ante non ex molestie sodales. Maecenas dictum auctor auctor. Cras dui lacus, euismod id iaculis ornare, ultrices vel nunc. Pellentesque venenatis urna at nibh mollis elementum. Vestibulum ut elementum augue, sed tincidunt velit. Duis id diam egestas, malesuada metus in, aliquet leo. Sed sapien sem, pellentesque at dolor quis, posuere tristique nunc. Vivamus porta maximus ipsum nec lobortis.
+  </p>
+  <p class="text">
+    Donec vel leo aliquam, commodo augue quis, mattis nibh. Vestibulum lobortis nibh at faucibus consectetur. Nulla nec tortor vel nunc luctus semper. Ut nec congue nibh. Nullam pulvinar libero erat, nec semper turpis vulputate sed. Aliquam tortor lectus, aliquam vel justo vitae, sodales pharetra enim. Aenean at est turpis.
+  </p>
+  <p class="text">
+    Morbi sodales libero vel consectetur euismod. Phasellus laoreet pharetra purus, id posuere sapien tempus vel. Morbi in ante lectus. Phasellus sodales, risus vitae varius laoreet, lectus turpis vehicula augue, volutpat mattis arcu dolor id enim. Morbi rhoncus orci a dolor tincidunt, nec fringilla purus ultricies. Praesent fermentum nunc nec dictum rutrum. Aenean sed tortor dui. Donec vel felis quis orci luctus tempor. Sed ex turpis, euismod eget est eu, convallis imperdiet arcu. Suspendisse ullamcorper eget urna eget dignissim. Fusce facilisis ultricies sapien aliquam congue.
+  </p>
+  <p class="text">
+    Maecenas quis quam auctor, finibus risus porta, malesuada eros. Cras scelerisque sit amet felis posuere iaculis. Aliquam a arcu quis risus feugiat faucibus. Nulla hendrerit magna quis quam pellentesque scelerisque. Donec leo massa, sodales id erat eu, cursus egestas lacus. Sed vel sapien eu risus sodales dignissim. Nam semper lorem id ipsum posuere, sed iaculis urna pulvinar. Proin eget consequat diam, bibendum sodales libero.
+  </p>
+</body>
+<script type="text/javascript">
+  document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.getElementById("title").innerHTML = "Light Mode"
+            localStorage.setItem("theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.getElementById("title").innerHTML = "Dark Mode"
+            localStorage.setItem("theme", 'dark');
+        }
+    })
+
+</script>
+</html>
